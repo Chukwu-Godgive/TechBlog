@@ -1,0 +1,38 @@
+<!-- Blog side bar for Top Articles and Featured Posts -->
+
+
+
+<div class="side-blog-post">
+    <div class="top-articles">
+        <h3 class="top-articles-title">Top Articles</h3>
+        <% for (let i = 0; i < 5; i++) { %>
+            <% if (BlogSideBar[i] != null) { %>
+                <div class="top-card">
+                    <a href="/posts/<%=BlogSideBar[i].postTitle%>">
+                        <h3><%=BlogSideBar[i].postTitle%></h3>
+                    </a>
+                    <p><%= BlogSideBar[i].date %></p>
+                </div>
+            <% } else { %>
+                <div class="top-card">
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+    <div class="features">
+        <h3 class="features-title">Features</h3>
+        <% for (let i = 10; i < 3; i++) { %>
+            <% if (BlogSideBar[i] != null) { %>
+                <div class="feature-card">
+                    <img src="<%=BlogSideBar[i].imageUrl%>" alt="<%=BlogSideBar[i].category%>" />
+                    <a href="/posts/<%=BlogSideBar[i].postTitle%>">
+                        <h3><%=BlogSideBar[i].postTitle%></h3>
+                    </a>
+                </div>
+                <% } else { %>
+                    <div class="feature-card">
+                    </div>
+                <% } %>
+            <% } %>
+    </div>
+</div>

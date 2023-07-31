@@ -1,0 +1,153 @@
+    <!-- Navigation Menus start-->
+    <%- include("../components/navbar") -%>
+    <!-- Navigation Menus ends-->       
+
+    <!-- Header hero start-->
+    <header>
+      <div class="container">
+        <div class="hero">
+          <div class="hero-title">
+            <h1>Inside Design: Stories and interviews</h1>
+          </div>
+
+          <div class="hero-description">
+            <p>
+              Subscribe to learn about new product features, the latest in
+              technology, and updates.
+            </p>
+          </div>
+
+          <div class="hero-subscribe">
+            <p class="error"><%=Warning%><span class="notice"><%=Notice%></span></p>
+            <form action="/" method="post">
+              <input type="email" name="TechBlogSubscribe" placeholder="Enter your email" autocomplete="off" required />
+              <button>Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header hero ends-->
+
+    <!-- Main contents start -->
+    <main>
+      <div class="container">
+        <!-- Recent posts start -->
+        <section>
+          <div class="section-title">Recent blog posts</div>
+          <div class="recent-posts">
+            <!-- recent-posts-left column -->
+            <div class="recent-posts-left">
+              <!-- post 0 -->
+              <% for (let i = 0; i < 1; i++) { %>
+                <% if (AllFoundPosts[i] != null) { %>
+                    <div class="recent-post-0">
+                      <img src="<%=AllFoundPosts[i].imageUrl%>" alt="<%=AllFoundPosts[i].category%>" />
+                      <div class="post-content">
+                        <p class="author-name-date"><%=AllFoundPosts[i].author%>. <%=AllFoundPosts[i].date%></p>
+                        <div class="view-post">
+                          <a href="/posts/<%=AllFoundPosts[i].postTitle%>"><h1 class="post-title"><%=AllFoundPosts[i].postTitle%></h1></a>
+                          <a href="/posts/<%=AllFoundPosts[i].postTitle%>"><p><i class="fi fi-bs-arrow-up-right"></i></p></a>
+                        </div>
+                        <p class="post-body recent-post-body"><%=AllFoundPosts[i].postBody.slice(0, 144) + "..."%></p>
+                        <div class="post-category">
+                          <button class="category"><%=AllFoundPosts[i].category%></button>
+                        </div>
+                      </div>
+                    </div>
+                <% } else { %>
+                    <div class="recent-post-0">
+                      <div class="post-content">
+                        <div class="view-post">
+                        </div>
+                        <div class="post-category">
+                        </div>
+                      </div>
+                    </div>
+              <% }}%>
+            </div>
+
+            <!--
+          recent-posts-right column the three recent posts goes here
+          -->
+            <div class="recent-posts-right 3">
+              <!-- post 1 -->
+              <% for (let i = 1; i < 4; i++) { %>
+                <% if (AllFoundPosts[i] != null) { %>
+                  <div class="recent-post-1">
+                    <img src="<%=AllFoundPosts[i].imageUrl%>" alt="<%=AllFoundPosts[i].category%>" />
+                    <div class="post-content left-column-size">
+                      <p class="right-column-author-name-date"><%=AllFoundPosts[i].author%>. <%=AllFoundPosts[i].date%></p>
+                      <a href="/posts/<%=AllFoundPosts[i].postTitle%>">
+                        <h1 class="post-title"><%=AllFoundPosts[i].postTitle%></h1>
+                      </a>
+                      <p class="post-body"><%= AllFoundPosts[i].postBody.slice(0, 65) + "..."%></p>
+                      <div class="post-category">
+                        <button class="category"><%=AllFoundPosts[i].category%></button>
+                      </div>
+                    </div>
+                  </div>
+                <% } else { %>
+                  <div class="recent-post-1">
+                    <div class="post-content left-column-size">
+                      <div class="post-category">
+                      </div>
+                    </div>
+                  </div>
+                <% }} %>
+            </div>
+          </div>
+        </section>
+        <!-- Recent posts ends -->
+
+        <!-- All blog posts start -->
+        <section>
+          <div class="section-title">All blog posts</div>
+          <!-- All post page 1 -->
+          <div class="all-posts">
+            <!-- post 1 -->
+            <% for (let i = 4; i < AllFoundPosts.length; i++) { %>
+              <div class="all-post-1">
+                <img src="<%=AllFoundPosts[i].imageUrl%>" alt="<%=AllFoundPosts[i].category%>" />
+                <div class="post-content">
+                  <p class="author-name-date"><%=AllFoundPosts[i].author%>. <%=AllFoundPosts[i].date%></p>
+                  <div class="view-post">
+                    <a href="/posts/<%=AllFoundPosts[i].postTitle%>">
+                      <h1 class="post-title"><%=AllFoundPosts[i].postTitle%></h1>
+                    </a>
+                    <a href="/posts/<%=AllFoundPosts[i].postTitle%>">
+                      <p><i class="fi fi-bs-arrow-up-right"></i></p>
+                    </a>
+                  </div>
+                  <p class="post-body"><%=AllFoundPosts[i].postBody.slice(0, 100) + "..."%></p>
+                  <div class="post-category">
+                    <button class="category"><%=AllFoundPosts[i].category%></button>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+          </div>
+
+          <!-- Horizontal Line, Directions, and Pagination -->
+          <div class="pagination">
+            <hr class="horizontal-line" />
+            <div class="paging-section">
+              <button class="previous"><i class="fi fi-bs-arrow-small-left"></i> Previous</button>
+              <div class="page-numbers">
+                <button class="active">1</button>
+                <button class="page-number-1">2</button>
+                <button class="page-number-1">3</button>
+                <button class="page-number-1">4</button>
+                <button class="page-number-1">5</button>
+              </div>
+              <button class="next">Next <i class="fi fi-rr-arrow-small-right"></i></button>
+            </div>
+          </div>
+        </section>
+        <!-- All blog posts ends -->
+      </div>
+    </main>
+    <!-- Main contents ends -->
+
+    <!-- Footer Start-->
+    <%- include("../components/footer") -%>

@@ -1,0 +1,50 @@
+<!-- Navigation Menus start-->
+<%- include("../components/navbar") -%>
+<!-- Navigation Menus ends--> 
+
+<main>
+    <div class="container">
+        <div class="feedback-main">
+            <div class="feedback-title">
+                <h3>FeedBack</h3>
+                <p>Help us make our site suitable, submit any error, request, suggestion or things you will like us to add.</p>
+            </div>
+            <div class="feedback">
+                <p class="error"><%= Empty %></p>
+                <form action="./feedback" method="post">
+                    <p class="feedback-name"><span class="asterisk">*</span>Name</p>
+                    <input type="text"
+                        name="SenderName"
+                        placeholder="Please enter your name"
+                        autocomplete="off"
+                        required
+                    />
+
+                    <p class="feedback-email">Email</p>
+                    <input type="email"
+                        name="SenderEmail"
+                        placeholder="Email"
+                        autocomplete="off"
+                    />
+
+                    <p class="feedback-message"><span class="asterisk">*</span>Message</p>
+                    <textarea name="SenderMessage"
+                        class="feedback-message-input"
+                        cols="30" 
+                        rows="10"
+                        placeholder="Submit any error, request, or suggestion"
+                        required
+                    ></textarea>
+
+                    <div class="submit-feedback-form">
+                        <button type="submit">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Start-->
+<%- include("../components/footer") -%>

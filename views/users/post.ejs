@@ -1,0 +1,27 @@
+<!-- Navigation Menus start-->
+<%- include("../components/navbar") -%>
+<!-- Navigation Menus ends--> 
+
+<main>
+    <div class="container">
+        <div class="post-main">
+            <div class="all-post-1">
+                <img src="<%= FullPost.imageUrl %>" alt="<%= FullPost.category %>" />
+                <div class="post-content">
+                    <p class="author-name-date"><%= FullPost.author %>. <%= FullPost.date %></p>
+                    <div class="view-post">
+                        <h1 class="post-title post-h1"><%= FullPost.postTitle %></h1>
+                    </div>
+                    <p class="post-body"><%= FullPost.postBody %></p>
+                    <div class="post-category">
+                        <button class="category"><%= FullPost.category %></button>
+                    </div>
+                </div>
+            </div>
+            <%- include("../components/blogsidebar") -%>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Start-->
+<%- include("../components/footer") -%>

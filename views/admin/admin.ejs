@@ -1,0 +1,41 @@
+<!-- Navigation Menus start-->
+<%- include("../components/adminnavbar") -%>
+<!-- Navigation Menus ends--> 
+
+<main>
+    <div class="container">
+        <div class="admin-main">
+            <div class="admin-profile">
+                <img src="<%=AdminProfile%>" alt="profile-picture">
+            </div>
+            <div class="todo-items">
+                <h3>Things you can do as the admin</h3>
+                <ul class="items">
+                    <li>1. You can write and publish new articles from
+                        <a href="./admin/compose" class="items-link">compose. 
+                            <i class="fi fi-bs-arrow-up-right"></i>
+                        </a>
+                    </li>
+                    <li>2. View written articles or posts 
+                        <a href="./admin/published" class="items-link">published. 
+                            <i class="fi fi-bs-arrow-up-right"></i>
+                        </a>
+                    </li>
+                    <li>3. See users complain over your web application from 
+                        <a href="./admin/feedback" class="items-link">feedback. 
+                            <i class="fi fi-bs-arrow-up-right"></i>
+                        </a>
+                    </li>
+                    <li>5. Set new profile pictures from 
+                        <a href="./admin/settings" class="items-link">settings. 
+                            <i class="fi fi-bs-arrow-up-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Start-->
+<%- include("../components/footer") -%>

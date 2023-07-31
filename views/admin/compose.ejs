@@ -1,0 +1,57 @@
+<!-- Navigation Menus start-->
+<%- include("../components/adminnavbar") -%>
+<!-- Navigation Menus ends--> 
+<main>
+    <div class="container">
+        <div class="compose">
+            <p class="error"><%= Empty %></p>
+            <form action="./compose" method="post" enctype="multipart/form-data">
+                <div class="post-title-input">
+                    <h3><span class="asterisk">*</span>Post Title</h3>
+                    <input type="text" 
+                        name="PostTitle"
+                        placeholder="Post title"
+                        autocomplete="off"
+                        required>
+                </div>
+                <div class="post-body-input">
+                    <h3><span class="asterisk">*</span>Post Body</h3>
+                    <textarea 
+                        name="PostBody" 
+                        id="" 
+                        placeholder="Write your post" 
+                        cols="30" 
+                        rows="25"
+                        required
+                    ></textarea>
+                </div>
+                <div class="category-author">
+                    <div class="post-category-input">
+                        <h3>Category</h3>
+                        <input type="text"
+                            name="Category"
+                            placeholder="Enter blog category"
+                            autocomplete="off">
+                    </div>
+                    <div class="post-author-input">
+                        <h3><span class="asterisk">*</span>Author</h3>
+                        <input type="text"
+                            name="Author"
+                            placeholder="Writer name"
+                            autocomplete="off"
+                            required>
+                    </div>
+                </div>
+                <div class="post-image-input">
+                    <h3><span class="asterisk">* </span>+ Add Image</h3>
+                    <input type="file" name="PostImage" id="" accept="image/jpeg, image/png" required>
+                </div>
+                <div class="compose-button">
+                    <button type="submit">Publish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<!-- Footer Start-->
+<%- include("../components/footer") -%>

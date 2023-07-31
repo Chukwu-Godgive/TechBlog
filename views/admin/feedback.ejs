@@ -1,0 +1,23 @@
+<!-- Navigation Menus start-->
+<%- include("../components/adminnavbar") -%>
+<!-- Navigation Menus ends--> 
+<main>
+    <div class="container">
+        <h3><%= Empty %></h3>
+        <div class="feedback-main">
+            <ol>
+                <% Message.forEach((feedbacks) => { %>
+                    <div class="feedbacks">
+                            <li>
+                                <h4>By: <%= feedbacks.name %> | <span class="feedback-span"><%= feedbacks.email %></span></h3>
+                                <p><%= feedbacks.message %></p>
+                            </li>
+                    </div>
+                    <hr class="horizontal-line">
+                <% }) %>
+            </ol>
+        </div>
+    </div>
+</main>
+<!-- Footer Start-->
+<%- include("../components/footer") -%>

@@ -1,0 +1,43 @@
+<%- include("../components/adminnavbar") -%>
+<!-- Navigation Menus ends--> 
+
+<!-- Main Section Start-->
+<main>
+    <div class="container">
+        <div class="published-main">
+            <h3><%= Empty %></h3>
+            <div class="post-container">
+                <% Post.forEach((posts) => { %>
+                    <form action="./published" method="post">
+                    <div class="all-published-posts">
+                        <div class="published-post-image">
+                            <img src="<%= posts.imageUrl %>" alt="<%= posts.category %>">
+                        </div>
+                        <div class="published-post-texts">
+                            <div class="published-post-view">
+                                <a href=""><h3><%= posts.postTitle %></h3></a>
+                                <a href="">
+                                    <p><i class="fi fi-bs-arrow-up-right"></i></p>
+                                </a>
+                            </div>
+                            <p class="published-post-body"><%= posts.postBody.slice(0, 100) + "..." %></p>
+                            <button type="submit" 
+                                name="Edit"
+                                value="<%= posts._id %>">Edit +
+                            </button>
+                            <button type="submit" 
+                                name="Delete"
+                                value="<%= posts._id %>">Delete -
+                            </button>
+                            <p class="published-post-author"><%= posts.author %>. <%= posts.date %></p>
+                        </div>
+                    </div>
+                </form>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Start-->
+<%- include("../components/footer") -%>
