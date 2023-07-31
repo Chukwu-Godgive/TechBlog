@@ -401,6 +401,10 @@ app.post("/admin/:admin", uploader.single("PostImage"), async (req, res) => {
 });
 
 // Port
-app.listen(process.env.Port || 3000, () => {
-    console.log("Server running on port 3000");
+let port = process.env.Port;
+if (port === null || port === "") {
+    port = 3000
+}
+app.listen(port, () => {
+    console.log("Server started successfully");
 });

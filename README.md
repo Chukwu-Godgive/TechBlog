@@ -19,7 +19,7 @@
     <a href="https://github.com/chukwu-godgive/TechBlog"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/chukwu-godgive/TechBlog">View Live Site</a>
+    <a href="https://techblog-xaeg.onrender.com/">View Live Site</a>
     ·
     <a href="https://github.com/chukwu-godgive/TechBlog/issues">Report Bug</a>
     ·
@@ -32,7 +32,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![TechBlog][homepage-screenshot]]()
+[![TechBlog][homepage-screenshot]](https://techblog-xaeg.onrender.com/)
 
 This is a blog site web application that enables you to blog on the go. It can easily be implemented without stress or blockage.
 
@@ -71,7 +71,7 @@ This project is built with these robust tools(language).
 
 Chukwu Godgive - [@givestarzy](https://twitter.com/givestarzy)
 
-Project Link: [TechBlog]()
+Project Link: [TechBlog](https://techblog-xaeg.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
