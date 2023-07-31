@@ -13,8 +13,6 @@
     <img src="./public/images/sample1.png" alt="TechBlogLogo" width="80" height="80">
   </a>
 
-  <h3 align="center">TechBlog</h3>
-
   <p align="center">
     An awesome blog app that enables you to blog on the go!
     <br />
@@ -46,7 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![TechBlog][homepage-screenshot]](../images/sample2.png)
+[![TechBlog][homepage-screenshot]]()
 
 This is a blog site web application that enables you to blog on the go. It can easily be implemented without stress or blockage.
 
@@ -87,6 +85,7 @@ Project Link: [TechBlog]()
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
+[homepage-screenshot]: ../images/sample2.png
 <!-- [Html-url]
 [Css-url]
 [JavaScript-url]
