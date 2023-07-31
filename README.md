@@ -65,11 +65,16 @@ Of course is a fullstack web application you can also use to learn and improve y
 
 This project is built with these robust tools(language).
 
-* [![Html][HTML]][Html-url]
+<!-- * [![Html][HTML]][Html-url]
 * [![Css][CSS]][Css-url]
 * [![JavaScript][JavaScript.info]][JavaScript-url]
 * [![Nodejs][Nodejs.org]][Nodejs-url]
-* [![MongoDB][Mongodb.com]][Mongodb-url]
+* [![MongoDB][Mongodb.com]][Mongodb-url] -->
+* Html
+* Css
+* JavaScript
+* Nodejs
+* Mongodb
 
 
 
@@ -85,7 +90,7 @@ Project Link: [TechBlog]()
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[homepage-screenshot]: ../images/sample2.png
+[homepage-screenshot]: ./public/images/sample2.png
 <!-- [Html-url]
 [Css-url]
 [JavaScript-url]
