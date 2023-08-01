@@ -402,9 +402,6 @@ app.post("/admin/:admin", uploader.single("PostImage"), async (req, res) => {
 
 // Port
 let port = process.env.Port;
-if (port === null || port === "") {
-    port = 3000
-}
 app.listen(port, () => {
     console.log("Server started successfully");
 });
