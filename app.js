@@ -353,11 +353,6 @@ app.post("/admin/:admin", uploader.single("PostImage"), async (req, res) => {
                 blogPost.save();
                 res.redirect(postUrl)
             })
-            .catch(error, (resp) => {
-                console.log(error)
-                console.log(resp)
-                res.render("admin/" + postUrl, {Empty: error})
-            });
         } else {
             res.render("admin/" + postUrl, {Empty: "Please fill the required fields"})
         };
