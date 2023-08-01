@@ -401,7 +401,8 @@ app.post("/admin/:admin", uploader.single("PostImage"), async (req, res) => {
 });
 
 // Port
-let port = process.env.Port;
-app.listen(port, () => {
+let port1 = process.env.PORT;
+let port2 = process.env.PORT_NEW
+app.listen(port1 || port2, () => {
     console.log("Server started successfully");
 });
