@@ -232,7 +232,7 @@ app.post("/:pages", (req, res) => {
 
     // login
     if (page === "login") {
-        let username = req.body.Username;
+        let username = _.lowerCase(req.body.Username);
         let password = req.body.Password;
     
         Admin.find({}).then((admin) => {
@@ -240,7 +240,7 @@ app.post("/:pages", (req, res) => {
                 if (username === adminData.username && password === adminData.password) {
                     res.redirect("admin");
                 } else {
-                    res.render("users/login", {AdminProfile: adminData, Wrong: "*wrong login details"});
+                    res.render("users/login", {AdminProfile: adminData.profileUrl, Wrong: "*wrong login details"});
                 }
             });
         });

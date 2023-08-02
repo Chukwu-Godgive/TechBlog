@@ -81,14 +81,17 @@ li {
 
 .menu {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 25px;
     align-items: center;
 }
 
 .menu-list {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 25px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .sub-products {
@@ -484,4 +487,245 @@ section {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+}
+
+
+/*////////////////////////////////
+///         Media Query          ///
+///////////////////////////////*/
+@media (max-width: 480px) {
+    /* Subscribe */
+    .hero-title {
+        padding-bottom: 1rem;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .hero-subscribe {
+        width: 100%;
+    }
+
+    .hero-subscribe form {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-subscribe input {
+        width: 100%;
+    }
+
+    /*////////////////////////////////
+///       Main Contents       ///
+///////////////////////////////*/
+section {
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+.section-title {
+    padding-bottom: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #16161d;
+}
+
+.recent-posts {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.recent-post-body {
+    width: 100%;
+}
+
+/* Left section */
+.recent-post-0 img {
+    width: 100%;
+}
+
+.recent-posts-left,
+.recent-posts-right,
+.recent-post-1 img,
+.left-column-size {
+    width: 100%;
+}
+
+.author-name-date {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 25px 0 10px;
+}
+
+.view-post {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-title {
+    font-size: 20px;
+}
+
+.post-body {
+    margin: 10px 0 25px;
+}
+
+.category {
+    border: 1.5px solid #282C35;
+    background-color: white;
+    color: #282C35;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Right section */
+.recent-post-1 {
+    display: flex;
+    column-gap: 15px;
+    padding-bottom: 30px;
+    align-items: start;
+}
+
+.right-column-author-name-date {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+/* All blog posts */
+.all-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.all-post-1 {
+    width: 100%;
+}
+
+.all-post-1 img {
+    width: 100%;
+}
+
+.post-category {
+    margin-bottom: 5px;
+}
+
+/* Horizontal Line, Directions, and Pagination */
+.horizontal-line {
+    border: 1.5px solid lightgray;
+    margin: 30px 0 25px
+}
+
+.paging-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous,
+.next {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+    border-width: 2px;
+    color:#16161d;
+    cursor: pointer;
+}
+
+.active {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #16161d;
+    border: 2px solid #16161d;
+    color: white;
+    cursor: pointer;
+}
+
+.page-number-1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+    border: none;
+    color: #16161d;
+    cursor: pointer;
+}
+
+/*////////////////////////////////
+///           Footer          ///
+///////////////////////////////*/
+.footer-heading {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-heading input {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-heading button{
+    margin: 10px auto 0;
+}
+
+.footer-body {
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    width: 50%;
+}
+
+.footer-description {
+    width: 50%;
+    margin-left: 20px
+}
+
+.ft-logo-description {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.footer-product,
+.footer-resources,
+.footer-social,
+.footer-legal {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.footer-product-title,
+.footer-resources-title,
+.footer-social-title,
+.footer-legal-title {
+    font-size: 16px;
+    background-color: rgba(250, 235, 215, 0.322);
+}
+
+.copyright-social {
+    flex-wrap: wrap;
+}
+
+/*////////////////////////////////
+///     Post, Feedback, Error404 and Login    ///
+///////////////////////////////*/
+.login,
+.feedback {
+    width: 100%;
+}
 }
