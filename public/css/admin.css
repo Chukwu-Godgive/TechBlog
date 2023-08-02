@@ -30,39 +30,6 @@
     font-weight: 600;
 }
 
-.login input {
-    border: 1.5px solid lightgrey;
-    border-radius: 8px;
-    padding: 10px;
-    margin-right: 10px;
-    outline: none;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color:#16161d;
-    width: 50%;
-}
-
-.password {
-    margin-top: 20px;
-}
-
-.submit-login-form button {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 750;
-    padding: 8px 5px;
-    border-radius: 8px;
-    background-color: #16161d;
-    border: 2px solid #16161d;
-    color:white;
-    cursor: pointer;
-    margin-top: 10px;
-    width: 50%;
-}
-
-
-
 /* Compose */
 .compose {
     margin: 50px auto 100px;
@@ -115,12 +82,6 @@
 /* Published */
 .published-main {
     min-height: 100vh;  
-}
-
-.post-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 
 .all-published-posts {
@@ -183,4 +144,77 @@
     cursor: pointer;
     margin-top: 25px;
     width: 25%;
+}
+
+/*////////////////////////////////
+///         Media Query          ///
+///////////////////////////////*/
+@media (max-width: 480px) {
+    .admin-main {
+        flex-wrap: wrap;
+    }
+    
+    .admin-profile img {
+        width: 150px;
+        text-align: center;
+    }
+    
+    .todo-items h3 {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* Compose */
+.compose {
+    width: 100%;
+}
+
+.post-title-input input,
+.post-body-input textarea,
+.post-category-input input,
+.post-author-input input {
+    width: 100%;
+}
+
+.category-author {
+    flex-wrap: wrap;
+}
+
+.compose-button button {
+    width: 50%;
+}
+
+/* Published */
+.published-main {
+    min-height: 100vh;  
+}
+
+.all-published-posts {
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    padding: 0.5rem;
+}
+
+.published-post-image,
+.published-post-texts {
+    width: 100%;
+}
+
+.published-post-image img {
+    width: 100%;
+}
+
+/* Settings */
+.settings-main {
+    min-height: 50vh;
+    margin: 50px auto 50px;
+    padding: 1rem;
+}
+
+.settings-main button {
+    font-weight: 600;
+    width: 100%;
+}
 }
