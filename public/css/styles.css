@@ -583,6 +583,7 @@ section {
   /* Right section */
   .recent-post-1 {
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .right-column-author-name-date {
@@ -748,9 +749,10 @@ section {
     margin: 10px 0 20px;
   }
 
-  /* Right section */
-  .recent-post-1 {
+   /* Right section */
+   .recent-post-1 {
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .right-column-author-name-date {
