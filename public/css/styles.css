@@ -39,6 +39,17 @@ li {
   font-weight: 500;
 }
 
+.infoDiv {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  font-size: 10px;
+  color: #bb7171;
+  margin-left: 10px;
+}
+
 .error {
   color: red;
   font-size: 1rem;
@@ -114,6 +125,7 @@ li {
   border-radius: 50%;
   width: 50px;
 }
+
 
 /*////////////////////////////////
 ///           Header           ///
@@ -513,6 +525,22 @@ section {
   }
 }
 
+@media (max-width: 849px) {
+  .logo {
+    margin: 0 auto;
+  }
+  
+  .menu {
+    margin: 0 auto;
+    justify-content: center;
+    row-gap: 15px;
+  }
+  
+  .menu-list {
+    justify-content: center;
+    row-gap: 15px;
+  }
+}
 /*////////////////////////////////
 ///Media Query for 481px - 768px///
 ///////////////////////////////*/
@@ -749,8 +777,8 @@ section {
     margin: 10px 0 20px;
   }
 
-   /* Right section */
-   .recent-post-1 {
+  /* Right section */
+  .recent-post-1 {
     flex-wrap: wrap;
     width: 100%;
   }
@@ -781,7 +809,7 @@ section {
   .post-h1 {
     font-size: 25px;
   }
-  
+
   /* Footer */
   .footer-heading {
     flex-wrap: wrap;
@@ -837,7 +865,7 @@ section {
   .copyright-social {
     flex-wrap: wrap;
   }
-  
+
   /* Post, Feedback, Error404 and Login */
   .login,
   .feedback {
